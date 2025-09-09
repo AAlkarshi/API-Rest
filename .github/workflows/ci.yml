@@ -19,7 +19,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn test org.jacoco:jacoco-maven-plugin:0.8.12:check --file pom.xml
+      run: mvn clean verify --file pom.xml
     - name: Generate JaCoCo Badge
       uses: cicirello/jacoco-badge-generator@v2
       with:
